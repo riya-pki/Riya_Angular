@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>RtmDemo</title>
+  <!-- <base href="/"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Styels start here -->
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/jquery.multiselect.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
+    
+    <!-- Scripts start here -->
+    <script src="assets/js/jquery.multiselect.js"></script>
+    <script src="assets/js/4bea204677.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery-3.5.1.js"></script>
+    <script src="assets/js/report.js"></script>
+    <script src="assets/js/bootstrap-datepicker.min.js"></script>
+    <!-- <script src="assets/js/sort-panels.js"></script> -->
+  <!-- <script src="/node_modules/jquery/dist/jquery.js"></script> -->
+  
+</head>
+
+<body>
+  <main class="container-fluid">
+    <div class="row main-page">
+      <!-- Left nav start here -->
+      <div class="col sideMenu-static col-auto ">
+        <!-- Logo & Burger menu icon-->
+        <div class="ms-2 mt-2 text-white genomics_logo_section">
+          <a href="#"><img src="../assets/images/logo-pkig.png" class="logo_ODIN mt-3 pe-2" alt="logo PKI Genomics"></a>
+          <a href="#"><i onclick="toggleMenu()" class="fa fa-bars px-2 fs-4 pt-2" ariadiag-hidden="true"></i><i
+              onclick="toggleMenu()" class="btn-close btn-close-white px-3 pt-3 text-white float-end"
+              aria-hidden="true"></i>
+          </a>
+        </div>
+        <!-- Logo & Burger menu icon end-->
+        <!-- Menu items -->
+        <div class="side-nav mx-1">
+          <ul class="nav flex-column mt-4">
+            <!-- Case Management-->
+            <li class="nav-item accordion" id="accordionLeftMenu1">
+              <div class="bg-transparent accordion-item">
+                <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="false" aria-controls="collapseOne">
+                  <i class="fa fa-layer-group pe-2 collapsed" aria-hidden="true" onclick="toggleMenu()"></i><span>Case
+                    Management</span>
+                </a>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionLeftMenu1">
+                  <div class="accordion-body">
+                    <ul class="list-group mt-0">
+                      <li class="py-2"><a href="#">View Cases</a></li>\
+                      <li class="py-2"><a href="#">Create New Cases</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Case Management end -->
+            <!-- Master Knowledgebase -->
+            <li class="nav-item accordion" id="accordionLeftMenu2">
+              <div class="bg-transparent accordion-item">
+                <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                  aria-expanded="false" aria-controls="collapseTwo">
+                  <i onclick="toggleMenu()" class="fa fa-border-all pe-2" aria-hidden="true"></i><span>Master
+                    Knowledgebase</span>
+                </a>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionLeftMenu2">
+                  <div class="accordion-body">
+                    <ul class="list-group mt-0">
+                      <li class="py-2"><a href="#">Gene</a></li>
+                      <li class="py-2"><a href="#">SNV</a></li>
+                      <!-- <li class="py-2"><a href="#">CNV</a></li> -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Master Knowledgebase end -->
+            <!-- Assay Management -->
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fa fa-sitemap pe-2" aria-hidden="true"></i><span class="navitem-text">Assay
+                  Management</span>
+              </a>
+            </li>
+            <!-- Assay Management end -->
+            <!--Reporting Management -->
+            <li class="nav-item accordion" id="accordionLeftMenu4">
+              <div class="bg-transparent accordion-item">
+                <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                  aria-expanded="false" aria-controls="collapseFour">
+                  <i onclick="toggleMenu()" class="fa fa-book pe-2" aria-hidden="true"></i><span>Reporting
+                    Management</span>
+                </a>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionLeftMenu4">
+                  <div class="accordion-body">
+                    <ul class="list-group mt-0">
+                      <li class="py-2"><a href="#">Reporting Template Management</a></li>
+                      <li class="py-2"><a href="#">Content Sections</a></li>
+                      <li class="py-2"><a href="#">Variant Interpretation Templates</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!--Reporting Management end-->
+            <!-- Client Management -->
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fa fa-users pe-2" aria-hidden="true"></i><span class="navitem-text">Client
+                  Management</span>
+              </a>
+            </li>
+            <!-- Client Management  end-->
+            <!-- Role Management -->
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fa fa-user-tag pe-2" aria-hidden="true"></i><span class="navitem-text">Role
+                  Management</span>
+              </a>
+            </li>
+            <!-- Role Management end-->
+            <!-- User Management -->
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fa fa-user pe-2" aria-hidden="true"></i><span class="navitem-text">User
+                  Management</span>
+              </a>
+            </li>
+            <!-- User Management  end-->
+          </ul>
+        </div>
+        <!-- Menu items end-->
+      </div>
+      <!-- Left Nav end here -->
+      <!-- Right Panel section start here -->
+      <!-- Header Nav bar start here -->
+      <div class="col RightCol col-lg p-0 m-0 w-100">
+        <header>
+          <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-0 py-2 m-0 fs-6 header_Nav">
+            <div class="container-fluid">
+              <a href="#" class="navbar-brand"><img src="../assets/images/logo-ODIN.png" alt="Logo ODIN 2"></a>
+              <div class="navbar-content">
+                <ul class="navbar-nav">
+                  <li class="nav-item mt-1 me-3">Your session will expire in <b>09.59</b></li>
+                  <li class="nav-item">
+                    <div class="dropdown">
+                      <a href="#" class="dropdown-toggle user_Section" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Nikhil Parmar<div class="badge text-bg-primary rounded-pill gradient py-1 px-1 ms-2 ">
+                          <i class="fa fa-user-alt text-primary fs-6 m-0 text-white "></i>
+                        </div>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="UserProfile.html">Profile
+                            Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Help</a></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
+        <!-- Header nav bar end here  -->
+        <!-- Toggle Tabs  start here -->
+        <div class="container-fluid nav_Tabs_Wrap pt-2 mb-0">
+          <ul class="nav nav-tabs d-inline-flex caseMain-tabs" role="tablist">
+              <li class="nav-item"><a href="#" class="nav-link active" id="clientManagement-tab"
+                      data-bs-toggle="tab" data-bs-target="#clientManagement" role="tab"
+                      aria-selected="true">Reporting Template Management</a>
+              </li>
+          </ul>
+          <button class="btn btn-primary tab_btn rounded-pill px-3 float-end " data-bs-toggle="modal"
+              data-bs-target="#addNewCase">Apply
+          </button>
+          <button class="btn btn-light tab_btn rounded-pill px-3 float-end me-3" data-bs-toggle="modal"
+              data-bs-target="#addNewClient">Clear
+          </button>
+          <button class="btn btn-light tab_btn rounded-pill px-3 float-end me-3" data-bs-toggle="modal">
+              Cancel
+          </button>
+      </div>
+      <!-- Toggle Tabs end -->
+        <app-root></app-root>
+        <footer class="modal-footer justify-content-right mt-5">
+          <button type="button" class="btn btn-secondary btn-sm rounded-pill px-3 fs_Small">
+            Cancel</button>
+          <button type="button" class="btn btn-secondary btn-sm rounded-pill px-3 fs_Small mx-2">Clear</button>
+          <button type="submit" class="btn btn-primary btn-sm rounded-pill px-3 fs_Small">Apply</button>
+        </footer>
+      </div>
+    </div>
+  </main>
+    <!-- Script Left menu  -->
+    <script>
+      let pageMenu = document.querySelector('.main-page');
+      function toggleMenu() {
+          pageMenu.classList.toggle("menu-active")
+      };
+  </script>
+  <!-- Script Left menu end -->
+</body>
+
+</html>
